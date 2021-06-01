@@ -1,0 +1,48 @@
+{
+	"name": "fabric_malek_network",
+	"version": "1.0.0",
+	"client": {
+		"tlsEnable": true,
+		"adminCredential": {
+			"id": "exploreradmin",
+			"password": "exploreradminpw"
+		},
+		"enableAuthentication": true,
+		"organization": "Org1MSP",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"mychannel": {
+			"peers": {
+				"peer0.org1.malek.com": {}
+			}
+		}
+	},
+	"organizations": {
+		"Org1MSP": {
+			"mspid": "Org1MSP",
+			"adminPrivateKey": {
+				"path": "/tmp/crypto/peerOrganizations/org1.malek.com/users/Admin@org1.malek.com/msp/keystore/priv_sk"
+			},
+			"peers": ["peer0.org1.malek.com"],
+			"signedCert": {
+				"path": "/tmp/crypto/peerOrganizations/org1.malek.com/users/Admin@org1.malek.com/msp/signcerts/cert.pem"
+			}
+		}
+	},
+	"peers": {
+		"peer0.org1.malek.com": {
+			"tlsCACerts": {
+				"path": "/tmp/crypto/peerOrganizations/org1.malek.com/peers/peer0.org1.malek.com/tls/ca.crt"
+			},
+			"url": "grpcs://peer0.org1.malek.com:7051"
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"name": "fabric_OLD_NAME_network",
+	"version": "1.0.0",
+	"client": {
+		"tlsEnable": true,
+		"adminCredential": {
+			"id": "exploreradmin",
+			"password": "exploreradminpw"
+		},
+		"enableAuthentication": true,
+		"organization": "Org1MSP",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"mychannel": {
+			"peers": {
+				"peer0.org1.OLD_NAME.com": {}
+			}
+		}
+	},
+	"organizations": {
+		"Org1MSP": {
+			"mspid": "Org1MSP",
+			"adminPrivateKey": {
+				"path": "/tmp/crypto/peerOrganizations/org1.OLD_NAME.com/users/Admin@org1.OLD_NAME.com/msp/keystore/priv_sk"
+			},
+			"peers": ["peer0.org1.OLD_NAME.com"],
+			"signedCert": {
+				"path": "/tmp/crypto/peerOrganizations/org1.OLD_NAME.com/users/Admin@org1.OLD_NAME.com/msp/signcerts/cert.pem"
+			}
+		}
+	},
+	"peers": {
+		"peer0.org1.OLD_NAME.com": {
+			"tlsCACerts": {
+				"path": "/tmp/crypto/peerOrganizations/org1.OLD_NAME.com/peers/peer0.org1.OLD_NAME.com/tls/ca.crt"
+			},
+			"url": "grpcs://peer0.org1.OLD_NAME.com:7051"
+		}
+	}
+}
