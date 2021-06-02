@@ -79,7 +79,6 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.$OR
 
 *  With this tutorial, you may have your private network already configured with Hyperledger explorer 
 *  This will help  you to focus more on the implementation of your smart contrat and  to view, invoke, deploy or query blocks, transactions and associated data, network information using the hyperledger explorer.
-* 
 *  Main contributions of this tutorial:
 
 
