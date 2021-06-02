@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 # Your_First_HF_Network
 
 This project will permit to launch your first customized network with Hyperledger explorer service.
-It will help the developer to focus more on the development of his smart contract.
+Mainly, It will help the developer to focus more on the development of his smart contract and to monitor the different interactions with the blockchain.
+This repository is based on [the Using the Fabirc test network tuto](https://hyperledger-fabric.readthedocs.io/en/latest/test_network.html) and [Hyperledger explorer repository](https://github.com/hyperledger/blockchain-explorer)
 
 
 ## Prerequisites
@@ -90,6 +90,3 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.$OR
 
 
 
-=======
-# HLF_Explorer
->>>>>>> f98327dd4fab0cdb6fec7487864fa4368f50470c
